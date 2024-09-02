@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+$defaultfont: "Montserrat", sans-serif
+$primarycolor: #ef0027
+$secondarycolor: #7c858c
+$white: #fff
+
+@mixin dflex-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin position-absolute
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0 
+    right: 0
+
+html, body
+    min-height: 100% 
+body
+    margin: 0
+    padding: 0
+    font-family: $defaultfont
+    color: #323232
+    font-size: 14px
+    overflow-x: hidden
+    background: #fff
+.defaultfont
+    font-family: $defaultfont
+a
+    text-decoration: none !important
+.primary-color
+    color: $primarycolor
+.secondary-color
+    color: $secondarycolor
+.btn:focus
+    outline: none
+    box-shadow: 0 0 0 
+.btn-default, .btn-secondary
+    background: $primarycolor
+    border-radius: 0
+    font-size: 16px
+    font-weight: 500
+    color: #fff
+    border: 1px solid transparent
+    transition: all 0.3s
+    padding: 10px 26px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-width: 130px
+    &:hover
+        color: #fff !important
+        background:  #000 !important
+        border-color: #000
+        border-radius: 0 
+.btn-secondary
+    background: $secondarycolor
+.header
+    width: 100%
+    z-index: 999
+    position: sticky
+    top: 0
+    background: #fff
+    .navbar-nav
+        .nav-item
+            display: flex
+            align-items: center
+            &.active, &:hover
+                background: $primarycolor
+                .nav-link, .fa   
+                    color: #fff
+        .nav-link
+            font-size: 16px 
+            color: #999ea3
+            font-weight: 500
+            padding: 24px 10px
+    .fa
+        font-size: 12px
+        margin: 2px 10px 0 2px
+        color: #999ea3
+    .static-links
+        .fa
+            font-size: 18px
+            color: $primarycolor
+    .dropdown
+        display: flex
+        align-items: center
+        .dropdown-menu
+            top: 100%
+            border: 1px solid #f1f1f1
+            box-shadow: 0 10px 26px rgba(204, 204, 204, 0.41)
+            padding: 0
+            overflow: hidden
+            .dropdown-item
+                font-size: 16px 
+                color: #999ea3
+                font-weight: 500
+                padding: 10px 14px
+                &.active, &:hover
+                    background: $primarycolor
+                    color: #fff
+        &:hover
+            .dropdown-menu
+                display: block
+    .dropdown-toggle
+        &:after
+            content: none
+    .btn-secondary
+        margin-left: 30px
+    &.darkHeader
+        background: #fff
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.32)
+.section-space
+    padding: 60px 0
+.section-title
+    font-size: 36px
+    font-weight: 700
+    margin: 0 0 15px
+    color: $primarycolor
+.details-text
+    font-size: 18px
+    line-height: 32px
+    margin: 0 0 15px
+    color: #7c858c
+.cover-img
+    width: 100%
+    height: 100%
+    object-fit: cover
+.md-section-title
+    font-size: 20px
+    line-height: 32px
+    margin: 0 0 15px
+    color: #2d2d2d
+    font-weight: 500
+.home-banner-section
+    position: relative
+    .home-bg-img
+        width: 100%
+        object-fit: cover
+        height: calc(100vh - 73px)
+        max-height: 1080px
+        min-height: 500px
+    .hm-captions
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(23, 23, 23, 0.80)
+        @include dflex-center
+        text-align: center
+        color: #fff
+        .home-title
+            font-size: 60px
+            font-weight: 700
+        .details-text
+            color: #fff
+            margin: 40px 0
+.about-wrapper
+    position: relative
+    .about-bg-img
+        width: 100%
+        min-height: 420px
+        object-fit: cover
+        max-height: 500px
+    .about-captions
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(23, 23, 23, 0.85)
+        padding: 40px
+        color: #fff
+        .section-title, .details-text
+            color: #fff
+            max-width: 910px
+.slider-content
+    height: 100%
+    overflow: hidden
+    position: relative
+    .about-wrapper
+        height: 100%
+        .about-captions
+            background: url(assets/imgs/map-img.png) no-repeat #f79900
+            background-size: cover
+            height: 100%
+            background-position: center
+        .primary-bg
+            background-color: $primarycolor
+    .swiper-pagination
+        text-align: left
+        padding-left: 36px
+        bottom: 30px
+        .swiper-pagination-bullet
+            width: 12px
+            height: 12px
+            display: inline-block
+            border-radius: 0
+            background: #000
+            opacity: .2
+            &.swiper-pagination-bullet-active
+                background: #fff
+                opacity: 1
+.brand-box
+    position: relative
+    overflow: hidden
+    height: 100%
+    margin-top: 30px
+    .cover-img
+        min-height: 300px
+    .captions
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(23, 23, 23, 0.85)
+        color: #fff
+        @include dflex-center
+        .bds-content
+            position: absolute
+            top: 1000px
+            left: 50%
+            transform: translate(-50%, -50%)
+            transition: all 0.3s
+            width: 100%
+            padding: 20px
+    .md-section-title, .details-text
+        color: #fff
+    .details-text
+        font-size: 14px
+        line-height: 24px
+    .brand-logo
+        height: 200px
+        object-fit: contain
+        position: absolute
+        transition: all 0.3s
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &:hover
+        .brand-logo
+            position: absolute
+            top: -1000px
+        .bds-content
+            top: 50%
+.blog-card
+    border-color: #7c858c
+    .md-section-title
+        font-weight: 700
+        color: #7c858c
+    img.card-img-top
+        height: 250px
+        object-fit: cover
+    .details-text
+        color: #7c858c
+        display: -webkit-box
+        -webkit-line-clamp: 4
+        -webkit-box-orient: vertical  
+        overflow: hidden
+        font-size: 16px
+        line-height: 26px
+    .date
+        position: absolute
+        left: 20px
+        bottom: 20px
+        padding: 7px 16px
+        background: $primarycolor
+        font-weight: 500
+        color: #fff
+    .card-body
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        .btn
+            margin-top: auto
+    &:hover
+        background: #f6f6f6
+    .swiper-pagination
+        text-align: left
+        padding-left: 36px
+        bottom: 30px
+        .swiper-pagination-bullet
+            width: 12px
+            height: 12px
+            display: inline-block
+            border-radius: 0
+            background: #000
+            opacity: .2
+            &.swiper-pagination-bullet-active
+                background: #fff
+                opacity: 1
+.blog-slider-content
+    padding-bottom: 60px
+    .swiper-pagination
+        bottom: 10px
+        z-index: 9
+        text-align: center
+        .swiper-pagination-bullet-active
+            background: $primarycolor !important
+.ct-form
+    background: #f6f6f6
+    padding: 60px 
+    .form-control
+        padding: 12px 15px
+        border: 1px solid #7b868c
+        background: #f6f6f6
+        border-radius: 0
+        box-shadow: 0 0 0 !important
+.footer
+    background: url(assets/imgs/footer-bg.png) no-repeat
+    background-size: cover
+    padding: 70px 0
+    .details-text
+        font-size: 16px
+        line-height: 26px
+        color: #fff
+    .ft-title
+        font-size: 20px
+        color: $primarycolor
+        font-weight: 700
+    .ft-links
+        color: #fff
+    .newsletter-form
+        display: flex
+        .form-control, .btn
+            border-radius: 0 !important
+            box-shadow: 0 0 0 !important
+.copyright
+    background: #7b868c
+    padding: 8px 0
+    a, .details-text
+        font-size: 14px
+        color: #fff
+.header-content
+    .flex-height
+        height: 420px
+    .flex-center-content .about-captions
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+.sustainability-card
+    flex-direction: row-reverse
+    flex-wrap: wrap
+    border: 0
+    &:nth-child(even)
+        flex-direction:  row
+    .card-body
+        background: #f6f6f6    
+        height: 100%
+        padding: 40px
+    .details-text
+        -webkit-line-clamp: unset
+.about-wrapper .about-captions.dark-caption-bg
+    background: #101010
+.latest-news-section
+    .blog-card
+        margin-bottom: 30px
+.job-card
+    flex-wrap: wrap
+    flex-direction:  row
+    border-color: #ccc
+    margin-bottom: 30px
+    .md-section-title
+        color: #000
+    .counter
+        background-color: #f6e1e0
+        height: 70px
+        width: 70px
+        @include dflex-center
+        font-size: 32px
+        color: #000
+        font-weight: 500
+.about-wrapper.about-wrapper-lg 
+    .about-bg-img
+        height: 100%
+        max-height: unset
+        position: absolute
+        left: 0
+        top: 0
+    .about-captions
+        position: relative
+.h5.section-title
+    font-size: 26px
+.brand-box.gallery-box
+    position: relative
+    .cover-img
+        transition: all 0.2s
+    &:hover .cover-img
+        transform: scale(1.3)
+.brands-section .brand-box
+    height: auto
+.latest-content-section
+    border-top: 1px solid $primarycolor
+    h1 , .page-title
+        color: $primarycolor
+.header-banner-content .about-wrapper .about-bg-img
+    min-height: 380px
+    max-height: 380px
+.btn-link
+    color: #7c858c
+    font-weight: 600
+.accordion-button:not(.collapsed)
+    color: #000
+    background-color: #fff4f6
+    font-weight: 600
+.team-details-box
+    background: #f6f6f6
+    border: 1px solid #f6f6f6
+    text-align: center
+    margin-top: 30px
+    .member-img
+        height: 250px
+        width: 100%
+        object-fit: cover
+        filter: grayscale(1)
+    .member-name
+        font-weight: 600
+        margin: 0
+        font-size: 18px
+    .details-text
+        margin: 0
+        font-size: 16px
+        line-height: 26px
+    &:hover
+        border: 1px solid $primarycolor
+        background: #7b868c
+        .member-name, .details-text
+            color: #fff
+        .member-img
+            filter: grayscale(0)
+.team-modal
+    button.btn-close
+        position: absolute
+        right: 28px
+        top: 10px
+        z-index: 99
+    .modal-body
+        padding-top: 40px
+    .modal-title
+        font-weight: 600
+        color: $primarycolor
+        margin-bottom: 15px
+    .member-modal-img
+        position: sticky
+        top: 0
+    .modal-dialog-centered
+        min-height: calc(100% - 6.5rem)
+        height: calc(100% - 6.5rem)
+        margin-top: 3rem
+        width: 750px
+        max-width: calc(100% - 20px)
+.about-content-section
+    .flex-center-content .about-captions
+        position: relative
+        padding: 50px 0
+        .details-text
+            max-width: unset
+            font-size: 16px
+    .about-bg-img
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        max-height: unset
+        z-index: -1
+.history-box
+    .blend-img
+        mix-blend-mode: darken
+.gallery
+    margin: 40px auto
+    &-slider
+        margin: 0 0 10px 0
+    &-thumbs
+        width: 100%
+        padding: 10px 0 0 0
+        overflow: hidden
+        .swiper-slide 
+            text-align: center
+            border-top: 1px dashed #ccc
+            padding-top: 20px
+            position: relative
+            &:after
+                content: ''
+            .years
+                opacity: .4
+                writing-mode: vertical-rl
+                text-orientation: mixed
+                font-size: 16px
+            &:after
+                content: ''
+                position: absolute
+                top: -5px
+                left: 50%
+                transform: translateX(-50%)
+                background: #ccc
+                height: 10px
+                width: 10px
+                border-radius: 20px
+            &-active 
+                .years
+                    opacity: 1
+                    color: $primarycolor
+                    font-weight: 500
+                &:after
+                    background: $primarycolor
+            img
+                width: auto
+                height: 100%
+.value-section
+    background: url(assets/imgs/our-value-bg.png) no-repeat
+    background-size: cover
+.awards-slider
+    padding-bottom: 50px
+    .swiper-pagination-bullet
+        border-radius: 0
+        width: 10px
+        height: 10px
+        &-active
+            background: $primarycolor
+
+@media (min-width: 1780px)    
+    .about-wrapper .about-captions
+        padding: 60px
+    .details-text
+        font-size: 20px
+        line-height: 40px
+    .section-title
+        font-size: 40px
+    .slider-content .swiper-pagination
+        text-align: left
+        padding-left: 56px
+@media (max-width: 1199px)
+    .header
+        padding: 14px 0
+        .navbar-toggler
+            background: $primarycolor
+            color: #fff
+            margin-left: auto
+            padding: 8px 12px
+            margin-left: 16px
+        .navbar-collapse
+            position: absolute
+            top: 100%
+            left: 0
+            background: #fff
+            width: 100%
+            overflow: auto
+            display: block
+            transition: all 0.3s
+            padding: 20px
+            max-height: 0
+            box-shadow: 0 1px 40px rgba(0, 0, 0, 0.09)
+            visibility: hidden
+            margin: 14px 0 0 
+            .btn-secondary
+                margin-left: 20px
+                margin-top: 10px
+            .nav-item
+                justify-content: space-between
+                flex-wrap: wrap
+                background: transparent !important
+                &:hover
+                    .nav-link
+                        color: $primarycolor
+                .dropdown-menu
+                    min-width: 100%
+                    position: relative
+                    box-shadow: 0 0 0
+                    border: 0
+                    border-radius: 0
+                    padding: 0 10px
+            .nav-link
+                padding: 8px 10px
+            &.show
+                visibility: visible
+                max-height: 1000px
+            .navbar-toggler
+                position: absolute
+                top: 16px
+                right: 14px
+                svg
+                    width: 34px
+                    height: 34px
+    .slider-content .about-wrapper
+        .about-captions
+            position: relative
+            padding-bottom: 100px
+    .brand-box .brand-logo
+        height: 130px
+    .team-details-box .member-img
+        height: 200px
+@media (max-width: 992px)
+    .header
+        .navbar-brand img
+            height: 50px
+    .section-title
+        font-size: 32px
+    .static-links .ms-4
+        margin-left: 1rem !important
+    .about-wrapper .about-captions
+        padding: 30px
+    .gallery-box.brand-box .cover-img
+        min-height: 200px
+    .sustainability-card .card-body
+        padding: 30px
+    .team-details-box .member-img
+        height: 290px
+@media (max-width: 767px)
+    .btn-default, .btn-secondary
+        font-size: 14px
+    .section-space
+        padding: 40px 0
+    .section-title
+        font-size: 28px
+    .home-banner-section .hm-captions
+        .home-title
+            font-size: 32px
+            font-weight: 700
+        .details-text
+            margin: 20px 0
+    .details-text
+        font-size: 14px
+        line-height: 24px
+    .brand-box
+        height: auto
+    .ct-form
+        padding: 30px
+    .footer
+        padding: 30px 10px
+    .header-content .flex-height
+        height: 360px
+        .about-bg-img
+            min-height: unset
+    .sustainability-card .card-body
+        padding: 20px
+    .team-modal .modal-title
+        font-size: 18px
+        line-height: 24px
+    .about-wrapper .about-bg-img
+        min-height: 320px
+@media (max-width: 567px)
+    .header 
+        .navbar > .container
+            display: flex
+            flex-wrap: nowrap
+    .about-wrapper .about-captions
+        padding: 30px 20px
+    .section-title
+        font-size: 24px
+    .btn-default, .btn-secondary
+        padding: 8px 20px
+        min-width: 110px
+    .team-modal .modal-dialog-centered
+        margin-left: 11px

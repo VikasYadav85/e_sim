@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+$titlefont: "Plus Jakarta Sans", sans-serif;
+$primarycolor: #8edb41
+$secondarycolor: #005aa6
+$darkprimarycolor: #181818
+$lightred: #FFF8F8
+
+@mixin dflex-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+html, body
+    min-height: 100% 
+    background: #fff
+body
+    margin: 0
+    padding: 0
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #616161
+    font-size: 14px
+    overflow-x: hidden
+.titlefont, h1, h2, h3, h4, h5, h6, .btn, .nav-link, .btn-link
+    font-family: $titlefont
+h1, h2, h3, h4, h5, h6 
+    color: $darkprimarycolor
+a
+    text-decoration: none !important
+.primary-color
+    color: $primarycolor
+.text-darkcolor
+    color: $darkprimarycolor !important
+.btn
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+.btn:focus
+    outline: none
+    box-shadow: 0 0 0 
+.btn-default
+    background: $primarycolor
+    color: $darkprimarycolor
+    padding: 8px 30px
+    border-radius: 40px
+    font-size: 16px
+    font-weight: 700
+    border: 1px solid transparent
+    &:hover
+        color: $primarycolor
+        background: $secondarycolor
+        border-color: $secondarycolor
+.fw-medium
+    font-weight: 500
+.fw-semibold
+    font-weight: 600
+.header
+    width: 100%
+    z-index: 999
+    position: sticky
+    top: 0
+    padding: 14px 0
+    z-index: 9999
+    background: #eef1f6
+    .navbar-nav
+        .nav-link
+            color: $darkprimarycolor
+            margin-right: 50px
+            font-size: 16px
+            font-weight: 600
+            padding: 20px 0
+            display: flex
+            align-items: center
+            &:hover, &.active
+                color: $secondarycolor
+                .dropdown-toggle
+                    color: $secondarycolor
+                p
+                    color: #000
+    .navbar-brand img
+        height: 90px
+.section-space
+    padding: 90px 0
+.primary-color
+    color: $primarycolor !important
+.secondary-color
+    color: $secondarycolor !important
+.darkprimary-color
+    color: $darkprimarycolor !important
+.details-text
+    color: #595959
+    font-size: 16px
+    line-height: 26px 
+    margin: 0 0 30px
+.hero-banner
+    background: #eef1f6
+    .caption-wrapper
+        max-width: 548px
+    .title-font
+        font-size: 60px
+        line-height: 70px 
+        margin: 0 0 30px
+        font-weight: 700
+        .devider-text
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                height: 3px
+                width: 100%
+                background: $secondarycolor
+    .icon-group
+        position: relative
+        background: #fff
+        border-left: 4px solid $primarycolor
+        border-radius: 100px
+        overflow: hidden
+        .form-control
+            background: transparent
+            border: 0
+            padding: 10px 10px 10px 46px
+        .control-icon
+            position: absolute
+            left: 15px
+            top: 10px
+    .bn-img
+        position: absolute
+        bottom: -100px
+        max-width: 690px
+        right: -110px
+.section-title
+    font-size: 36px
+    font-weight: 600
+    color: $darkprimarycolor
+    margin: 0 0 30px
+.section-title-sm
+    font-size: 24px
+    font-weight: 600
+    color: $darkprimarycolor
+    margin: 0 0 30px
+.sm-title
+    font-size: 14px
+    font-weight: 600
+    color: $darkprimarycolor
+.country-box
+    text-align: center
+    margin: 30px 0 0
+    .country-flag
+        background: #eef1f6
+        height: 70px
+        width: 70px
+        border-radius: 70px
+        @include dflex-center
+        margin: 0 auto 15px
+        img
+            height: 22px
+            object-fit: contain
+.packages-section
+    background: $secondarycolor
+.packages-box
+    padding: 25px
+    border-radius: 10px
+    background: #fff
+    margin-top: 30px
+    .section-title-sm
+        font-size: 22px
+    .details-text
+        font-size: 16px
+        font-weight: 600
+    .mw-1
+        max-width: 1px
+.verical-devider
+    height: 100%
+    width: 1px
+    padding: 0
+    min-width: 1px
+    background: $secondarycolor
+.lightgray-bg
+    background: #eef1f6
+.cta-wrapper
+    background: url(../../assets/imgs/cta-bg.png) no-repeat
+    background-size: cover
+    position: relative
+    padding: 50px
+    margin-top: 126px
+    border-radius: 10px
+    .cta-img
+        position: absolute
+        right:  30px
+        bottom: 0
+.fw-500
+    font-weight: 500
+.user-icon
+    height: 70px
+    width: 70px
+    border-radius: 70px
+    overflow: hidden
+    margin: 20px auto
+    img
+        height: 100%
+        width: 100%
+        object-fit: cover
+.username
+    font-size: 18px
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+    content: none
+.social-ic
+    width: 18px
+    height: 18px
+    object-fit: contain
+.footer
+    background: $secondarycolor
+    .details-text
+        font-size: 14px
+    .ft-links
+        margin-bottom: 5px
+        a
+            font-size: 14px
+            color: #fff
+            position: relative
+            display: inline-flex
+            align-items: center
+            &::before
+                content: ""
+                height: 1px
+                width: 0
+                background: #8edb41
+                display: block
+                margin-right: 0
+                transition: all 0.3s
+            &:hover
+                color: $primarycolor
+                &::before
+                    margin-right: 10px
+                    width: 10px
+    .paymentcard-img
+        width: 36px
+    .copyright a:hover
+        color: $primarycolor !important
+.details-text-sm
+    font-size: 14px
+.accordion-item
+    background-color: #fff
+    border: 0
+    margin: 0 0 20px
+    border-radius: 8px !important
+    overflow: hidden
+    .accordion-button
+        border: 0
+        box-shadow: 0 0 0
+        font-size: 14px
+        font-weight: 600
+        color: $darkprimarycolor
+        &::after
+            background: none
+            content: '+'
+            font-size: 24px
+            line-height: 13px
+            text-align: center
+        &:not(.collapsed)
+            background: $secondarycolor
+            color: #fff
+            &::after
+                content: '-'
+.language-dropdown
+    position: fixed
+    bottom: 116px
+    right: 20px
+    z-index: 999
+    .btn
+        display: flex
+        align-items: center
+        gap: 10px
+        background: #fff
+        border-radius: 50px
+        color: $darkprimarycolor
+        font-weight: 600
+        border: 1px solid #eef1f6
+        box-shadow: 0 6px 9px 0px #cfcfcf5c
+        outline: none !important
+    .dropdown-menu
+        padding: 0
+        .dropdown-item
+            padding: 8px 20px
+            border-bottom: 1px solid #eef1f6
+            font-size: 14px
+            color: $darkprimarycolor
+            font-weight: 500
+            &:active
+                background: transparent
+.chat-boaticon
+    position: fixed
+    bottom: 20px
+    right: 20px
+    z-index: 999
+.login-wrapper
+    height: 100vh
+    display: flex
+    overflow: auto
+    .login-banner
+        width: 50%
+        height: 100%
+        object-fit: cover
+        position: fixed
+        right: 0
+        top: 0
+    .center-box
+        position: absolute
+        left: 0
+        width: 50%
+        display: flex
+        align-items: center
+        min-height: 100%
+    .form-box
+        max-width: 500px
+        margin: 30px auto
+        width: 100%
+        padding: 0 30px
+    .form-control
+        height: 52px
+        background: #EEF1F6
+        color: #1C1C1C
+        border: 0
+        font-size: 14px
+        box-shadow: 0 0 0
+        border-radius: 10px
+        padding: 14px 18px
+        &:placeholder
+            color: #1C1C1C
+    .eye-icon
+        position: absolute
+        right: 18px
+        top: 14px
+        cursor: pointer
+        background: none
+        border: 0
+        padding: 0
+    .details-text
+        font-size: 14px
+    .devider
+        font-size: 16px
+        color: $darkprimarycolor
+        font-weight: 700
+        padding: 20px 0
+        position: relative
+        display: flex
+        justify-content: center
+        div
+            background: #fff
+            padding: 2px 4px
+            z-index: 1
+        span
+            color: #525252
+            font-weight: 600
+        &:before
+            content: ''
+            z-index: 1
+            height: 1px
+            width: 100%
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            background: #F0EDFF
+    .social-btn
+        margin-top: 16px
+        border: 1px solid #F0EDFF
+        border-radius: 50px
+        background: transparent
+        padding: 10px 14px
+        font-size: 16px
+        color: $darkprimarycolor
+        @include dflex-center
+        width: 100%
+        gap: 10px
+        img
+            width: 24px
+        span
+            font-weight: 700
+    .bottom-links
+        padding: 30px 0
+        text-align: center
+        color: $darkprimarycolor
+        a
+            font-weight: 600
+            color: $secondarycolor
+.slide-country-box
+    position: relative
+    .cover-img
+        height: 100%
+        width: 100%
+        object-fit: cover
+    .country-name
+        position: absolute
+        top: 15px
+        left: 0
+        color: #fff
+        padding: 12px 10px
+        text-align: center
+        background: rgba(0, 90, 166, 0.75)
+        width: 80%
+        text-align: center
+        font-size: 16px
+.country-swiper
+    .swiper-button-next, .swiper-button-prev
+        margin-top: -10px
+    .swiper-button-next
+        right: 16px
+    .swiper-button-prev
+        left: 16px
+.country-links
+    border: 1px solid #EEF1F6
+    padding: 12px 16px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 16px
+    color: $darkprimarycolor !important
+    margin-top: 30px
+    &:hover
+        border-color: $secondarycolor
+.country-tabs
+    overflow: hidden
+    justify-content: center
+    background: #EEF1F6
+    padding: 4px
+    border-radius: 50px
+    .nav-link
+        border: 0
+        padding: 12px 28px
+        color: $darkprimarycolor
+        font-size: 16px
+        font-weight: 700
+        &.active
+            border-radius: 50px
+            color: #fff
+            background: $secondarycolor
+@media (min-width: 1200px)
+    .col-lg-20
+        flex: 0 0 auto
+        width: 20%
+@media (max-width: 1400px)
+    .header 
+        .navbar-brand img
+            height: 70px
+        .navbar-nav
+            .nav-link
+                margin-right: 30px
+    .hero-banner
+        .caption-wrapper
+            max-width: 438px
+        .title-font
+            font-size: 48px
+            line-height: 60px 
+        .bn-img
+            max-width: 650px
+    .section-space
+        padding: 70px 0
+@media (max-width: 1199px)
+    .header
+        padding: 0
+    .home-banner
+        .bn-img
+            margin: -105px -210px 0 auto
+        .caption
+            width: 440px
+        .home-title
+            font-size: 34px
+            line-height: 42px
+    .section-space
+        padding: 60px 0
+    .hero-banner
+        .title-font
+            font-size: 42px
+            line-height: 54px
+        .bn-img
+            max-width: 540px
+            bottom: -60px
+    .btn-default
+        padding: 8px 22px            
+    .cta-wrapper .cta-img
+        max-width: 380px
+        
+@media (max-width: 992px)
+    .btn-default
+        padding: 8px 18px
+    .header
+        padding: 15px 0
+        .navbar-toggler
+            background: $primarycolor
+            color: #fff
+            border-radius: 8px
+            margin-left: auto
+            padding: 6px 8px
+            font-size: 16px
+            box-shadow: none !important
+            margin-right: 10px
+            .navbar-toggler-icon
+                height: 2px
+                width: 20px
+                background: #fff
+                margin: 4px 0
+                display: block
+        .navbar-nav
+            .nav-link
+                padding: 10px 20px
+                border-bottom: 1px solid #ccc
+                margin: 0
+            li.nav-item.dropdown
+                .nav-link
+                    pointer-events: auto
+                .dropdown-toggle svg
+                    margin: 0 0 0 auto
+                    min-width: 30px
+                    height: 30px
+                    color: #000
+                    cursor: no-drop
+                    padding: 5px
+                    transform: rotate(-90deg)
+        .navbar-collapse
+            position: fixed
+            top: 100px
+            right: -100%
+            width: 100%
+            overflow: auto
+            display: block
+            transition: all 0.3s
+            padding: 10px 0
+            margin: 0 !important
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.09)
+            background: #eef1f6
+            max-width: 300px
+            height: calc(100% - 70px)
+            overflow: hidden auto
+            z-index: 22
+            border-top: 1px solid #ccc
+            &.show
+                right: 0
+        .menu-backdrop
+            display: none
+        .navbar-collapse.show + .menu-backdrop
+            display: block
+            position: fixed
+            left: 0
+            top: 100px
+            height: 100%
+            width: 100%
+            background: #000
+            opacity: 0.6
+            bottom: 0
+    .hero-banner
+        .caption-wrapper
+            max-width: unset
+            text-align: center
+            padding-top: 50px
+        .title-font
+            font-size: 38px
+            line-height: 54px
+            margin: 0 0 20px
+        .bn-img
+            max-width: 380px
+            position: unset
+            margin: 0 auto
+            display: block
+    .section-title
+        font-size: 32px
+    .dowmload-ic
+        height: 140px
+    .cta-wrapper
+        margin-top: 0
+        .cta-img
+            right: 10px
+            max-width: 310px
+    .login-wrapper
+        background: #005aa6
+        background-image: url(../imgs/login-mobile-bg.png)
+        background-size: cover
+        overflow: auto
+        min-height: 100vh
+        height: auto
+        .center-box
+            width: 100%
+            padding: 0 24px
+            position: relative
+        .form-box
+            padding: 0 30px
+            background: #fff
+            padding: 30px 30px 0
+            border-radius: 25px
+@media (max-width: 767px)
+    .header
+        padding: 10px 0
+        .navbar-collapse
+            top: 90px
+            height: calc(100% - 60px)
+        .navbar-collapse.show + .menu-backdrop
+            top: 90px
+    .section-space
+        padding: 40px 0
+    .btn-default
+        font-size: 14px
+    .hero-banner
+        .caption-wrapper
+            padding-top: 30px
+        .title-font
+            font-size: 28px
+            line-height: 36px
+            margin: 0 0 10px
+        .bn-img
+            max-width: 380px
+            position: unset
+            margin: 0 auto
+            display: block
+    .section-title
+        font-size: 24px
+    .section-title-sm
+        font-size: 20px
+        margin: 0 0 20px
+    .details-text
+        font-size: 14px
+        line-height: 22px
+    .packages-box .section-title-sm
+        font-size: 18px
+    .cta-wrapper 
+        padding: 30px 30px 0
+        text-align: center
+        .cta-img
+            position: relative
+            right: 0
+            bottom: 0
+            max-width: 310px
+            margin: 20px auto 0
+            display: block
+            width: 100%
+    .swiper-button-next, .swiper-button-prev
+        img
+            width: 34px
+    .language-dropdown
+        bottom: 96px
+    .chat-boaticon img
+        width: 60px
+    .login-wrapper .form-control
+        height: 46px
+@media (max-width: 567px)
+    .header 
+        .navbar > .container
+            display: flex
+            flex-wrap: nowrap

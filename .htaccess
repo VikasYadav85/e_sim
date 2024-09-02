@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Remove 'index.php' from URL
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+   # Prevent access to 'public' directory
+    RewriteCond %{THE_REQUEST} /public [NC]
+    RewriteRule ^public(.*)$ / [L,R=301]
+
+    # Prevent access to 'public' keyword in URL
+    RewriteCond %{REQUEST_URI} ^/public($|/)
+    RewriteRule ^(.*)$ / [L,R=301]
+</IfModule>
